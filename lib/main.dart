@@ -90,11 +90,13 @@ class _MyHomePageState extends State<MyHomePage> {
     for (var i = 0; i < newTextField.length; i++) {
       textField.add(
         Row(
+          key: UniqueKey(),
           children: [
             Expanded(
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextFormField(
+                  initialValue: newTextField[i],
                   onChanged: (value) {
                     newTextField[i] = value;
                   },
